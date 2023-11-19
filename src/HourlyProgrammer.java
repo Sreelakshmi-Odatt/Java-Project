@@ -1,14 +1,42 @@
+/*
+ File name: HourlyProgrammer.java
+ Author: Sreelakshmi Odatt Venu 
+ Student number: 041093516
+ Course: CST8284 – OOP
+ Assignment: Lab 5
+ Date: 10/16/2023
+ Professor: Veda Vasavi Erukulla
+ Description:This is is the HourlyProgrammer class which extends from  the Programmer class .
+ */
 
-// THIS IS A CODE FILE FOR LAB 6. THIS CODE FILE REQUIRES SOME MODIFICATIONS!!!
-
-// HourlyProgrammer.java
-// HourlyProgrammer class extends Programmer.
+/**
+ * This is is the HourlyProgrammer class which extends from the Programmer class
+ * .
+ * 
+ * @author SREELAKSHMI ODATT VENU.
+ * @version 1.0
+ * @since javac 17.0.7
+ */
 
 public class HourlyProgrammer extends Programmer {
-	private double wage; // wage per hour
-	private double hours; // hours worked for week
+	/**
+	 * // wage per hour
+	 */
+	private double wage;
+	/**
+	 * hours worked for week
+	 */
+	private double hours; 
 
-//constructor
+	/**
+	 * constructor for the HourlyProgrammer
+	 * 
+	 * @param firstName the firstname
+	 * @param lastName the lastname
+	 * @param socialSecurityNumber the  socialSecurityNumber
+	 * @param wage the wage 
+	 * @param hours teh hours
+	 */
 	public HourlyProgrammer(String firstName, String lastName, String socialSecurityNumber, double wage, double hours) {
 		super(firstName, lastName, socialSecurityNumber);
 
@@ -24,7 +52,11 @@ public class HourlyProgrammer extends Programmer {
 		this.hours = hours;
 	}
 
-//set wage
+	/**
+	 * set wage
+	 * 
+	 * @param wage the wage 
+	 */
 	public void setWage(double wage) {
 		if (wage < 0.0) { // validate wage
 			throw new IllegalArgumentException("Hourly wage must be >= 0.0");
@@ -33,12 +65,20 @@ public class HourlyProgrammer extends Programmer {
 		this.wage = wage;
 	}
 
-//return wage
+	/***
+	 * return wage
+	 * 
+	 * @return wage
+	 */
 	public double getWage() {
 		return wage;
 	}
 
-//set hours worked
+	/**
+	 * set hours worked
+	 * 
+	 * @param hours the hours worked 
+	 */
 	public void setHours(double hours) {
 		if ((hours < 0.0) || (hours > 168.0)) { // validate hours
 			throw new IllegalArgumentException("Hours worked must be >= 0.0 and <= 168.0");
@@ -47,15 +87,22 @@ public class HourlyProgrammer extends Programmer {
 		this.hours = hours;
 	}
 
-//return hours worked
+	/**
+	 * return hours worked
+	 * 
+	 * @return hours
+	 */
 	public double getHours() {
 		return hours;
 	}
 
 //calculate earnings; override abstract method earnings in Programmer
-
-//MODIFY THIS PORTION. WHY WILL THIS PORTION OF YOUR CODE REQUIRE MODIFICATION?
-//PROVIDE THE ANSWER TO THIS QUESTION TO YOUR PROFESSOR DURING DEMO
+	/**
+	 * WHY WILL THIS PORTION OF YOUR CODE REQUIRE MODIFICATION? This method overides
+	 * the getPaymentAmount from the Programmer class and is used to set the salary
+	 * for each of the programmers who has diiferent salary .
+	 * 
+	 */
 
 	@Override
 	public double getPaymentAmount() {
@@ -66,17 +113,14 @@ public class HourlyProgrammer extends Programmer {
 		}
 	}
 
-//return String representation of HourlyProgrammer object              
+	/**
+	 * return String representation of HourlyProgrammer object
+	 */
 	@Override
 	public String toString() {
 		return String.format(" \nhourly programmer: " + getFirstName() + getLastName() + "\n"
 				+ "social security number: " + getSocialSecurityNumber() + " \nhourly wage:" + getWage()
 				+ " hours worked:" + getHours() + "\n" + "payment due: $" + String.format("%.2f", getPaymentAmount()));
 	}
-
-//TO DO: COMEPLETE THIS PORTION. Format your solution according to sample output.     
-//START     
-// INSERT YOUR CODE
-//END
 
 }

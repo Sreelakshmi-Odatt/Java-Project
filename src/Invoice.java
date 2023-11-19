@@ -1,19 +1,49 @@
 
-//LAB 6 - CST8284
-//LAB 6: Invoice.java
+/*
+ File name: Invoice.java
+ Author: Sreelakshmi Odatt Venu 
+ Student number: 041093516
+ Course: CST8284 – OOP
+ Assignment: Lab 5
+ Date: 10/16/2023
+ Professor: Veda Vasavi Erukulla
+ Description:This is is the invoice class .
+ */
 
-//This is the Invoice class which is an UNRELATED CLASS to the Programmer superclass
+/**
+ * This is is the invoice class .
+ * 
+ * @author SREELAKSHMI ODATT VENU.
+ * @version 1.0
+ * @since javac 17.0.7
+ */
 
-//The Invoice class implements Payme interface. NO MODIFICATION IS REQUIRED HERE!!!
 
 public class Invoice implements Payme {
-
+/**
+ * decleration of partNumber 
+ */
 	private String partNumber;
+	/**
+	 * decleration of partDescription 
+	 */
 	private String partDescription;
+	/**
+	 * decleration of quantity 
+	 */
 	private int quantity;
+	/**
+	 * decleration of pricePerItem 
+	 */
 	private double pricePerItem;
 
-//four-argument constructor
+/**
+ * four-argument constructor
+ * @param part the part 
+ * @param description the description 
+ * @param count the description 
+ * @param price the price 
+ */
 	public Invoice(String part, String description, int count, double price) {
 		partNumber = part;
 		partDescription = description;
@@ -21,54 +51,82 @@ public class Invoice implements Payme {
 		setPricePerItem(price); // validate and store price per item
 	}
 
-//set part number
+/**
+ * set the partnumber
+ * @param part the part number
+ */
 	public void setPartNumber(String part) {
 		partNumber = part; // should validate
 	}
 
-//get part number
+/**
+ * get part number
+ * @return partNumber
+ */
 	public String getPartNumber() {
 		return partNumber;
 	}
 
-//set description
+/**
+ * set description
+ * @param description the description of the part 
+ */
 	public void setPartDescription(String description) {
 		partDescription = description; // should validate
 	}
 
-//get description
+/**
+ * get description
+ * @return description
+ */
 	public String getPartDescription() {
 		return partDescription;
 	}
 
-//set quantity
+/**
+ * set quantity
+ * @param count the quantity 
+ */
 	public void setQuantity(int count) {
 		quantity = (count < 0) ? 0 : count; // quantity cannot be negative
 	}
 
-//get quantity
+/**
+ * get quantity
+ * @return quantity
+ */
 	public int getQuantity() {
 		return quantity;
 	}
 
-//set price per item
+/**
+ * set price per item
+ * @param price the price 
+ */
 	public void setPricePerItem(double price) {
 		pricePerItem = (price < 0.0) ? 0.0 : price; // validate price
 	}
 
-//get price per item
+/**
+ * get price per item
+ * @return  pricePerItem 
+ */
 	public double getPricePerItem() {
 		return pricePerItem;
 	}
 
-//return String representation of Invoice object
+/**
+ * return String representation of Invoice object
+ */
 	@Override
 	public String toString() {
 		return String.format(" \n%s: \n%s: %s (%s) \n%s: %d \n%s: $%,.2f", "invoice", "part number", getPartNumber(),
 				getPartDescription(), "quantity", getQuantity(), "price per item", getPricePerItem());
 	}
 
-//method required to carry out contract with interface Payme
+/**
+ * method required to carry out contract with interface Payme
+ */
 	@Override
 	public double getPaymentAmount() {
 		return getQuantity() * getPricePerItem(); // calculate total cost
