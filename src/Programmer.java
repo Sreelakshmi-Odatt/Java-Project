@@ -1,11 +1,7 @@
 /*
  File name: Programmer.java
  Author: Sreelakshmi Odatt Venu 
- Student number: 041093516
- Course: CST8284 – OOP
- Assignment: Lab 5
- Date: 10/16/2023
- Professor: Veda Vasavi Erukulla
+
  Description:This is is the  abstract Programmer superclass class which implements  the Payme interface .
  */
 /**
@@ -90,12 +86,5 @@ public abstract class Programmer implements Payme {
 		return String.format("%s %s\n%s: %s\n%s: %s", getFirstName(), getLastName(), getSocialSecurityNumber());
 	}
 
-	/**
-	 * Note: We do NOT implement Payme method getPaymentAmount() here. THEREFORE, TO
-	 * AVOID A COMPILATION ERROR, YOU SHOULD DECLARE THIS CLASS AS....?? Answer : We
-	 * declare this class as abstract class public abstract double earnings(); /**
-	 * No implementation here. DO YOU KNOW WHY? What should this method be? Answer:
-	 * abstrract methods does not have any implementations
-	 */
 
 }
