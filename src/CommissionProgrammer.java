@@ -1,12 +1,7 @@
 /*
   File name: CommissionProgrammer.java
- Author: Sreelakshmi Odatt Venu 
- Student number: 041093516
- Course: CST8284 – OOP
- Assignment: Lab 5
- Date: 10/16/2023
- Professor: Veda Vasavi Erukulla
- Description:This is is the CommissionProgrammer class which extends from the Programmer class .
+ Author: Sreelakshmi Odatt Venu
+ Description:This is is the CommissionProgrammer class which extends from the Programmer class.
  */
 /**
  * This is is the CommissionProgrammer class which extends from the Programmer
@@ -99,12 +94,7 @@ public class CommissionProgrammer extends Programmer {
 
 //calculate earnings; override abstract method earnings in Programmer.
 
-	/**
-	 * WHY WILL THIS PORTION OF YOUR CODE REQUIRE MODIFICATION? This method
-	 * overides the getPaymentAmount from the Programmer class and is used to set
-	 * the salary for each of the programmers who has diiferent salary .
-	 * 
-	 */
+
 
 	@Override
 	public double getPaymentAmount() {
