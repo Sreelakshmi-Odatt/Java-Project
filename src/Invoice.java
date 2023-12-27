@@ -2,11 +2,7 @@
 /*
  File name: Invoice.java
  Author: Sreelakshmi Odatt Venu 
- Student number: 041093516
- Course: CST8284 – OOP
- Assignment: Lab 5
- Date: 10/16/2023
- Professor: Veda Vasavi Erukulla
+
  Description:This is is the invoice class .
  */
 
