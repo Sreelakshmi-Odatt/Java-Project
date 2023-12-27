@@ -1,11 +1,7 @@
 /*
  File name: PaymeInterfaceTest.java
  Author: Sreelakshmi Odatt Venu 
- Student number: 041093516
- Course: CST8284 – OOP
- Assignment: Lab 5
- Date: 10/16/2023
- Professor: Veda Vasavi Erukulla
+
  Description:This is is the PaymeInterfaceTest class .
  */
 /**
@@ -36,9 +32,6 @@ public class PaymeInterfaceTest {
 		paymeObjects[5] = new BasePlusCommissionProgrammer("Sreelakshmi ", " Odatt Venu", " 102-34-5888",
 				1200.00, 0.04, 720.00);
 
-// TO DO: POPULATE THE ARRAY YOU CREATED WITH OBJECTS THAT IMPLEMENT Payable
-//CHECK THE OUTPUT FILE AND REUSE EXACTLY THE DETAILS PROVIDED SUCH AS FIRST NAME
-// LAST NAME, SOCIAL INSURANCE NUMBER, ETC.
 
 		// START CODE
 
@@ -66,7 +59,7 @@ public class PaymeInterfaceTest {
 
 		}
 
-// TO DO: INSERT YOUR PRINT STATEMENT HERE: ENSURE THAT YOUR 
+
 // OUTPUT FOLLOWS THE OUTPUT SAMPLE PROVIDED
 
 	}
